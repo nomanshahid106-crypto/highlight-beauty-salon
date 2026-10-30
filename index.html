@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highlight Beauty Salon — Where You Become the Highlight | Rahim Yar Khan</title>
+<meta name="description" content="Highlight Beauty Salon, Baghdad Colony, Rahim Yar Khan. Bridal makeup, hair, skin and mehndi studio rated 4.8 on Google. Call +92 314 6159598.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14060f; --bg2:#1d0a18; --panel:#22101e;
+  --gold:#d4af6a; --gold2:#f0d9a8; --rose:#e5989b; --blush:#f6e3dc;
+  --ink:#f5ece6; --muted2:#b08fa0;
+  --line:rgba(212,175,106,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Jost',sans-serif;overflow-x:hidden}
+::selection{background:var(--gold);color:#14060f}
+a{text-decoration:none;color:inherit}
+
+/* ambient background */
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0}
+.orb.a{width:480px;height:480px;background:#5c1f43;top:-140px;right:-120px;animation:drift 14s ease-in-out infinite alternate}
+.orb.b{width:380px;height:380px;background:#3d2a12;bottom:-120px;left:-100px;animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-40px,50px) scale(1.12)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+main{position:relative;z-index:2}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(20px,5vw,64px);background:linear-gradient(180deg,rgba(20,6,15,.88),rgba(20,6,15,0))}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;letter-spacing:.14em;font-weight:600}
+.logo em{color:var(--gold);font-style:italic}
+.nav-links{display:flex;gap:34px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase}
+.nav-links a{opacity:.85;position:relative;padding-bottom:4px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .35s}
+.nav-links a:hover{opacity:1;color:var(--gold2)}
+.nav-links a:hover::after{width:100%}
+.nav-call{border:1px solid var(--gold);color:var(--gold2);padding:9px 20px;border-radius:999px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;transition:.3s}
+.nav-call:hover{background:var(--gold);color:#14060f}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:130px clamp(20px,6vw,80px) 60px;position:relative}
+.hero-kicker{display:flex;align-items:center;gap:16px;font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold2)}
+.hero-kicker::before{content:"";width:56px;height:1px;background:var(--gold)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:.92;margin-top:26px;font-size:clamp(4rem,13.5vw,11.5rem)}
+.hero h1 .row{display:block;overflow:hidden}
+.hero h1 .row>span{display:inline-block;animation:rise 1.1s cubic-bezier(.19,1,.22,1) both}
+.hero h1 .row:nth-child(2)>span{animation-delay:.12s}
+.hero h1 .it{font-style:italic;color:transparent;-webkit-text-stroke:1.5px var(--gold)}
+@keyframes rise{from{transform:translateY(110%)}to{transform:translateY(0)}}
+.hero-sub{margin-top:30px;max-width:520px;font-size:1.08rem;font-weight:300;line-height:1.75;color:#e8d9d2}
+.hero-sub b{color:var(--gold2);font-weight:500}
+.hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:999px;font-size:.88rem;letter-spacing:.16em;text-transform:uppercase;transition:.3s;border:1px solid transparent}
+.btn-gold{background:linear-gradient(120deg,var(--gold),#b98a3e);color:#180812;font-weight:600;box-shadow:0 12px 34px rgba(212,175,106,.35)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(212,175,106,.45)}
+.btn-ghost{border-color:rgba(245,236,230,.35);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.hero-side{position:absolute;right:clamp(14px,3vw,44px);top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:.74rem;letter-spacing:.5em;text-transform:uppercase;color:var(--muted2)}
+@media(max-width:760px){.hero-side{display:none}}
+.badge{position:absolute;right:clamp(20px,7vw,110px);bottom:12vh;width:132px;height:132px}
+.badge svg{width:100%;height:100%;animation:spin 16s linear infinite}
+.badge text{font-size:10.2px;letter-spacing:.32em;fill:var(--gold2);text-transform:uppercase;font-family:'Jost',sans-serif}
+.badge .core{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif}
+.badge .core b{font-size:1.9rem;color:var(--gold2);line-height:1}
+.badge .core small{font-size:.62rem;letter-spacing:.24em;color:var(--muted2);font-family:'Jost',sans-serif;margin-top:4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.badge{width:104px;height:104px;bottom:9vh}}
+.scroll-cue{position:absolute;left:clamp(20px,6vw,80px);bottom:26px;font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:12px}
+.scroll-cue::after{content:"";width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(212,175,106,.06);overflow:hidden;padding:16px 0;transform:rotate(-1.2deg) scale(1.02)}
+.marquee-track{display:flex;width:max-content;animation:slide 26s linear infinite;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--gold2);white-space:nowrap}
+.marquee-track span{padding:0 26px}
+.marquee-track i{color:var(--rose);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:110px clamp(20px,6vw,80px);position:relative}
+.tag{font-size:.76rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}
+.tag::after{content:"";height:1px;width:70px;background:var(--line)}
+h2.big{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:500;line-height:1.05;margin-top:18px}
+h2.big em{color:var(--gold);font-style:italic}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.19,1,.22,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* about */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,80px);align-items:center}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{margin-top:22px;font-weight:300;line-height:1.85;color:#e6d5cc;font-size:1.04rem}
+.about .stats{display:flex;gap:clamp(20px,4vw,54px);margin-top:38px;flex-wrap:wrap}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold2);font-weight:600;display:block;line-height:1}
+.stat span{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:200px 200px 18px 18px;background:radial-gradient(120% 90% at 20% 0%,#7a2c52 0%,transparent 55%),radial-gradient(120% 100% at 90% 90%,#8a5a20 0%,transparent 50%),linear-gradient(160deg,#33122a,#1d0a18 70%);border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.portrait::before{content:"H";font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11rem;color:transparent;-webkit-text-stroke:1px rgba(240,217,168,.5)}
+.portrait::after{content:"EST. BAGHDAD COLONY · RYK";position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:.66rem;letter-spacing:.4em;color:var(--gold2)}
+.portrait-ring{position:absolute;inset:14px;border:1px dashed rgba(212,175,106,.35);border-radius:190px 190px 12px 12px}
+
+/* services — editorial rows */
+.rows{margin-top:54px;border-top:1px solid var(--line)}
+.row-s{display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;padding:27px 10px;border-bottom:1px solid var(--line);transition:.35s;position:relative;overflow:hidden}
+.row-s::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(212,175,106,.13),transparent 65%);transform:translateX(-101%);transition:transform .5s cubic-bezier(.19,1,.22,1)}
+.row-s:hover::before{transform:none}
+.row-s:hover{padding-left:22px}
+.row-s .no{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--gold)}
+.row-s h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500}
+.row-s p{color:var(--muted2);font-weight:300;font-size:.95rem;margin-top:3px;max-width:560px;line-height:1.6}
+.row-s .arr{font-size:1.5rem;color:var(--gold);transition:.35s}
+.row-s:hover .arr{transform:translateX(6px) rotate(-38deg)}
+.note{margin-top:20px;color:var(--muted2);font-size:.9rem;font-weight:300}
+.note a{color:var(--gold2);border-bottom:1px solid var(--line)}
+
+/* ritual steps */
+.ritual{background:linear-gradient(180deg,transparent,rgba(212,175,106,.05),transparent)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.step{border:1px solid var(--line);border-radius:16px;padding:34px 28px;background:rgba(34,16,30,.55);transition:.35s}
+.step:hover{transform:translateY(-6px);border-color:var(--gold);background:rgba(34,16,30,.9)}
+.step .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:3rem;color:transparent;-webkit-text-stroke:1px var(--gold)}
+.step h3{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;margin:14px 0 8px}
+.step p{color:var(--muted2);font-weight:300;line-height:1.7;font-size:.97rem}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:start}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+.visit-card{border:1px solid var(--line);border-radius:18px;padding:38px 32px;background:radial-gradient(120% 140% at 0% 0%,rgba(229,152,155,.13),transparent 55%),var(--panel)}
+.visit-card h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;margin-bottom:20px}
+.kv{display:flex;gap:14px;padding:13px 0;border-bottom:1px dashed rgba(212,175,106,.22);font-weight:300;line-height:1.6}
+.kv:last-of-type{border-bottom:none}
+.kv b{color:var(--gold2);font-weight:500;min-width:86px;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;padding-top:3px}
+.big-cta{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.12;font-weight:500}
+.big-cta em{color:var(--gold);font-style:italic}
+.visit p.lead{margin-top:18px;color:#e6d5cc;font-weight:300;line-height:1.8}
+
+footer{border-top:1px solid var(--line);padding:44px clamp(20px,6vw,80px) 110px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted2);font-size:.85rem;font-weight:300}
+footer .flogo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ink);letter-spacing:.12em}
+footer .flogo em{color:var(--gold)}
+.disc{width:100%;margin-top:14px;font-size:.75rem;opacity:.75}
+
+/* mobile action bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px}
+.mbar a{flex:1;text-align:center;padding:14px;border-radius:999px;font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.mbar .c{background:linear-gradient(120deg,var(--gold),#b98a3e);color:#180812}
+.mbar .w{background:#1faa55;color:#fff}
+@media(max-width:760px){.mbar{display:flex}footer{padding-bottom:96px}}
+</style>
+</head>
+<body>
+<div class="orb a"></div><div class="orb b"></div><div class="grain"></div>
+
+<nav>
+  <a class="logo" href="#top">HIGH<em>light</em></a>
+  <div class="nav-links">
+    <a href="#studio">The Studio</a>
+    <a href="#services">Services</a>
+    <a href="#ritual">Experience</a>
+    <a href="#visit">Visit Us</a>
+  </div>
+  <a class="nav-call" href="tel:+923146159598">Book Now</a>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="hero-kicker">Beauty Salon · Rahim Yar Khan</div>
+    <h1>
+      <span class="row"><span>Become the</span></span>
+      <span class="row"><span class="it">Highlight</span></span>
+    </h1>
+    <p class="hero-sub">Bridal makeup, signature hair and skin rituals in the heart of Baghdad Colony — the studio rated <b>4.8 stars</b> by the women of Rahim Yar Khan.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="https://wa.me/923146159598" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="#services">Explore Services</a>
+    </div>
+    <div class="hero-side">Highlight Beauty Salon — RYK</div>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">GOOGLE RATED · BRIDAL STUDIO · RAHIM YAR KHAN · </textPath></text></svg>
+      <div class="core"><b>4.8★</b><small>63 REVIEWS</small></div>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Bridal Makeup <i>✦</i></span><span>Signature Hair <i>✦</i></span><span>Skin Rituals <i>✦</i></span><span>Party Glam <i>✦</i></span><span>Mehndi Art <i>✦</i></span><span>Mani · Pedi <i>✦</i></span>
+      <span>Bridal Makeup <i>✦</i></span><span>Signature Hair <i>✦</i></span><span>Skin Rituals <i>✦</i></span><span>Party Glam <i>✦</i></span><span>Mehndi Art <i>✦</i></span><span>Mani · Pedi <i>✦</i></span>
+    </div>
+  </div>
+
+  <section id="studio">
+    <div class="about">
+      <div class="reveal">
+        <div class="tag">The Studio</div>
+        <h2 class="big">A quiet studio where <em>all eyes</em> end up on you</h2>
+        <p>Tucked into Baghdad Colony, Highlight Beauty Salon is a ladies' studio built around one idea — nobody leaves unnoticed. From full bridal transformations to everyday polish, every appointment is unhurried, personal and finished to a standard our clients rate 4.8 out of 5.</p>
+        <p>Walk in as you are. Walk out as the highlight.</p>
+        <div class="stats">
+          <div class="stat"><b>4.8★</b><span>Google rating</span></div>
+          <div class="stat"><b>63</b><span>Client reviews</span></div>
+          <div class="stat"><b>100%</b><span>Ladies only</span></div>
+        </div>
+      </div>
+      <div class="portrait reveal" aria-hidden="true"><div class="portrait-ring"></div></div>
+    </div>
+  </section>
+
+  <section id="services" style="padding-top:30px">
+    <div class="reveal">
+      <div class="tag">Services</div>
+      <h2 class="big">The <em>menu</em> of glow</h2>
+    </div>
+    <div class="rows reveal">
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Bridal%20Makeup" target="_blank" rel="noopener">
+        <span class="no">01</span>
+        <span><h3>Bridal Makeup</h3><p>Complete bridal looks for barat, walima and mehndi days — designed around your outfit, jewellery and camera light.</p></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Party%20Makeup" target="_blank" rel="noopener">
+        <span class="no">02</span>
+        <span><h3>Party &amp; Event Glam</h3><p>Polished makeup for dinners, functions and photos — soft glam or full drama, your call.</p></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Hair%20services" target="_blank" rel="noopener">
+        <span class="no">03</span>
+        <span><h3>Hair — Cut, Colour &amp; Styling</h3><p>Fresh cuts, colour, smooth finishes and occasion styling that holds all evening.</p></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Facials%20and%20Skin%20Care" target="_blank" rel="noopener">
+        <span class="no">04</span>
+        <span><h3>Facials &amp; Skin Care</h3><p>Deep-cleansing and brightening facials, polishing and glow treatments for tired, dull skin.</p></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Manicure%20and%20Pedicure" target="_blank" rel="noopener">
+        <span class="no">05</span>
+        <span><h3>Manicure &amp; Pedicure</h3><p>Relaxing hand and foot care finished with a clean, lasting shine.</p></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="row-s" href="https://wa.me/923146159598?text=I%20want%20to%20ask%20about%20Mehndi" target="_blank" rel="noopener">
+        <span class="no">06</span>
+        <span><h3>Mehndi Art</h3><p>Intricate bridal and festive henna, from delicate vines to full-hand traditional work.</p></span>
+        <span class="arr">→</span>
+      </a>
+    </div>
+    <p class="note reveal">Tap any service to ask about it on WhatsApp — or call us on <a href="tel:+923146159598">+92 314 6159598</a> for today's availability and prices.</p>
+  </section>
+
+  <section id="ritual" class="ritual" style="padding-top:30px">
+    <div class="reveal">
+      <div class="tag">The Experience</div>
+      <h2 class="big">Three steps to <em>unmissable</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">I.</div><h3>Consult</h3><p>Tell us the occasion, the outfit and the look you dream of. We plan shades, styles and timing around you — never a copy-paste face.</p></div>
+      <div class="step reveal"><div class="n">II.</div><h3>Transform</h3><p>Skin prepped, base perfected, details finished by hand. Unhurried chair time in a calm, ladies-only space.</p></div>
+      <div class="step reveal"><div class="n">III.</div><h3>Glow</h3><p>A final check in natural light, finishing touches, and you step out ready for every camera in the room.</p></div>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:30px">
+    <div class="visit">
+      <div class="reveal">
+        <div class="tag">Visit Us</div>
+        <p class="big-cta" style="margin-top:18px">Your chair is <em>waiting.</em></p>
+        <p class="lead">Bookings fill fast on weekends and in wedding season. Message us on WhatsApp to reserve your slot, or simply walk in — we will take it from there.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="https://wa.me/923146159598" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-ghost" href="tel:+923146159598">Call +92 314 6159598</a>
+        </div>
+      </div>
+      <div class="visit-card reveal">
+        <h3>Find the studio</h3>
+        <div class="kv"><b>Address</b><span>Baghdad Colony, Rahim Yar Khan, 64200, Pakistan</span></div>
+        <div class="kv"><b>Phone</b><span><a href="tel:+923146159598">+92 314 6159598</a></span></div>
+        <div class="kv"><b>Rating</b><span>4.8 stars from 63 Google reviews</span></div>
+        <div class="kv"><b>Map</b><span><a href="https://www.google.com/maps/search/?api=1&amp;query=Highlight+Beauty+Salon+Baghdad+Colony+Rahim+Yar+Khan" target="_blank" rel="noopener">Open in Google Maps →</a></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="flogo">HIGH<em>light</em></span>
+  <span>Highlight Beauty Salon · Baghdad Colony · Rahim Yar Khan</span>
+  <span><a href="tel:+923146159598">+92 314 6159598</a></span>
+  <p class="disc">Sample website concept created for Highlight Beauty Salon. Details shown are from the salon's public Google listing; please confirm services, prices and timings with the salon.</p>
+</footer>
+
+<div class="mbar">
+  <a class="c" href="tel:+923146159598">Call Now</a>
+  <a class="w" href="https://wa.me/923146159598" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
